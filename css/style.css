@@ -1,0 +1,127 @@
+* { box-sizing: border-box; }
+
+html, body { width: 100%; height: 100%; margin: 0; overflow-x: hidden;}
+
+header {
+	position: absolute;
+	top: 0;
+	width: 100%;
+	height: 40%;
+	-webkit-box-shadow: 0px 0px 15px 5px rgba(0, 0, 0, 0.1);
+	background: #f9f9f9;
+}
+
+header::after {
+	content: '';
+	position: absolute;
+	top: 0;
+	width: 150%;
+	margin-left: -25%;
+	height: 100%;
+	border-radius: 50%;
+	-webkit-box-shadow: 0px 0px 25px 5px rgba(0, 0, 0, 0.5);
+	z-index: -1;
+}
+
+div#info {
+	position: absolute;
+	top: 40%;	
+	width: 100%;
+	height: 200%;
+	background: #6666BA;
+	background: -webkit-linear-gradient(top, #6666BA, #68ba8f 50%, #c4df9b 100%);
+	font-family: 'Segoe-Light';
+	color: rgba(255,255,255,0.5);
+	padding: 2em;
+	z-index: -2;
+}
+
+div#info h1,h2,h3 {
+	font-weight: normal;
+	display: block;
+	margin: 0;
+	width: 100%;
+	text-align: center;
+}
+
+div#info h1 {
+	font-size: 45pt;
+	position: relative;
+	color: #f9f9f9;
+}
+
+div#info h2 { font-size: 12pt; }
+
+div#info h2:first-child { font-size: 18pt; margin-bottom: 0.5em; }
+
+div#info .infobox {
+	position: relative;
+	width: 100%;
+	height: 10em;
+	margin: 0 auto;
+	top: 5%;
+	background-size: 1em 1em;
+}
+
+div#info #about {
+	width: 60%;
+	top: 20em;
+	color: #333;
+	z-index: 5;
+}
+
+span#chevron {
+	position: absolute;
+	width: 3em;
+	height: 3em;
+	top: 10em;
+	left: 50%;
+	margin-left: -1.5em; 
+	-webkit-transform:  rotateX(45deg) rotate(-45deg);
+	border: 0.25em solid transparent;
+	border-left-color: rgba(255,255,255,0.5);
+	border-bottom-color: rgba(255,255,255,0.5);
+}
+
+span#chevron::before {
+	content: '';
+	position: absolute;
+	width: 2em;
+	height: 2em;
+	top: -1em;
+	left: 1em;
+	border: 0.25em solid transparent;
+	border-left-color: rgba(255,255,255,0.5);
+	border-bottom-color: rgba(255,255,255,0.5);
+}
+
+span#chevron::after {
+	content: '';
+	position: absolute;
+	width: 1em;
+	height: 1em;
+	top: -1.5em;
+	left: 2.5em;
+	border: 0.25em solid transparent;
+	border-left-color: rgba(255,255,255,0.5);
+	border-bottom-color: rgba(255,255,255,0.5);
+}
+
+@font-face {
+	font-family: 'Segoe-Light';
+	src: url("fonts/Segoe/segoeuil.eot");
+	src: url("fonts/Segoe/segoeuil.ttf");
+}
+
+@font-face {
+	font-family: 'Segoe-Bold';
+	src: url("fonts/Segoe/segoeuib.eot");
+	src: url("fonts/Segoe/segoeuib.ttf");
+}
+
+@font-face {
+	font-family: 'Source Code Pro';
+	font-style: normal;
+	font-weight: 400;
+	src: local('Source Code Pro'), local('SourceCodePro-Regular'), url("fonts/SourceCodePro/SourceCodePro.woff") format('woff');
+}

@@ -1,0 +1,310 @@
+.vert-stripes {
+	background-size: 1em 1em;
+	background-image: repeating-linear-gradient(90deg, transparent, transparent 3px, #3336BA 4px);
+}
+
+div#logo-container {
+	position: relative;
+	margin: 0 auto;
+	height: 250px;
+	width: 600px;
+}
+
+div.letter-section {
+	position: relative;
+	float: left;
+	height: 100%;
+	width: 200px;
+	padding: 5%;
+}
+
+/* ~~~~~~~~~~~~~~~~~~~~~~~ Letter "J" ~~~~~~~~~~~~~~~~~~~~~~~ */
+
+div#J div.letter-box {
+	position: absolute;
+	width: 70%;
+	height: 75%;
+	/*border-bottom: 1px dotted #6666BA;*/
+	/*border-left: 1px dotted #6666BA;*/
+}
+
+div#J div.the-letter {
+	position: absolute;
+	width: 25px;
+	height: 25px;
+	right: -5%;
+	top: 10%;
+	border-top: 1px solid #6666BA;
+	border-right: 1px solid #6666BA;
+	-webkit-transform-style: preserve-3d;
+	-webkit-transform: rotateX(75deg) rotateZ(-45deg);
+	z-index: 2;
+	background: #6666BA;
+}
+
+div#J div.the-letter::after {
+	content: '';
+	position: absolute;
+	width: 500%;
+	height: 100%;
+	border: 1px solid #6666BA;
+	background: rgb(176,176,218);
+	right: 0;
+	box-sizing: border-box;
+	-webkit-transform-origin: bottom right;
+	-webkit-transform: rotateZ(270deg) rotateY(-90deg); 
+}
+
+div#J div.the-letter::before {
+	content: '';
+	position: absolute;
+	width: 500%;
+	height: 100%;
+	border: 1px solid #6666BA;
+	border-bottom: 0px solid transparent;
+	left: 0px;
+	box-sizing: border-box;
+	-webkit-transform-origin: top left;
+	-webkit-transform: rotateY(90deg); 
+	z-index: 2;
+	background: #f9f9f9;
+}
+
+div#J div.dot {
+	position: absolute;
+	height: 25px;
+	width: 25px;
+	background: #6666BA;
+	right: -5%;
+	top: -5%;
+	z-index: 5;
+	-webkit-transform: rotateX(75deg) rotateZ(-45deg);
+	-webkit-animation: dot 2s alternate infinite ease-in-out;
+	-webkit-transform-style: preserve-3d;
+	box-sizing: border-box;
+}
+
+@-webkit-keyframes dot {
+	from { top: 5%; }
+	top { top: -5%; }
+}
+
+div#J div.dot::after {
+	content: '';
+	position: absolute;
+	width: 0;
+	height: 0;
+	border-top: 12.5px solid transparent;
+	border-bottom: 12.5px solid transparent;
+	border-left: 25px solid rgba(176,176,218,0.7);
+	-webkit-transform-origin: bottom left;
+	-webkit-transform: rotateY(-60deg);
+}
+
+div#J div.dot::before {
+	content: '';
+	position: absolute;
+	width: 0;
+	height: 0;
+	border-bottom: 25px solid rgba(176,176,218,1);
+	border-right: 12.5px solid transparent;
+	border-left: 12.5px solid transparent;
+	-webkit-transform-origin: bottom right;
+	-webkit-transform: rotateX(-60deg);
+}
+
+div#J div.dot span {
+	position: absolute;
+	height: 100%;
+	width: 100%;
+}
+
+div#J div.j-bottom {
+	position: absolute;
+	z-index: 0;
+	width: 9em;
+	height: 9em;
+	bottom: 10%;
+	border: 2px solid transparent;
+	border-bottom-color: #6666BA;
+	border-left-color: #6666BA;
+	border-radius: 50%;
+	-webkit-transform: rotate(-45deg);
+	overflow: hidden;
+}
+
+div#J div.j-bottom::before {
+	content: '';
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	border: 35px solid rgba(176,176,218,1);
+	border-bottom-left-radius: 50%;
+	border-top-left-radius: 50%;
+	box-sizing: border-box;
+	-webkit-transform: rotate(-45deg);
+	clip: rect(0,70px,150px,0);
+}
+
+div#J div.j-bottom::after {
+	content: '';
+	position: absolute;
+	width: 4em;
+	height: 4em;
+	bottom: 0;
+	border: 1px solid transparent;
+	box-sizing: border-box;
+	background-image: repeating-linear-gradient(-45deg, transparent, transparent 3px, #3336BA 5px);
+}
+
+/* ~~~~~~~~~~~~~~~~~~~~~~~ Letter "O" ~~~~~~~~~~~~~~~~~~~~~~~ */
+
+div#O div.letter-box {
+	position: absolute;
+	width: 70%;
+	height: 75%;
+	border-left: 2px solid #6666BA; 
+}
+
+div#O div.letter-box::after {
+	content: '';
+	position: absolute;
+	height: 100%;
+	width: 50%;
+	top: 0;
+	background-image: repeating-linear-gradient(-45deg, transparent, transparent 3px, #3336BA 5px);
+}
+
+div#O div.the-letter {
+	position: absolute;
+	width: 9em;
+	height: 9em;
+	left: 10%;
+	top: 10%;
+	border: 5px solid #6666BA;
+	border-radius: 50%;
+	box-sizing: border-box;
+}
+
+div#O div.the-letter div.gimbal {
+	content: '';
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	left: 0;
+	border: 5px solid #6666BA;
+	border-radius: 50%;
+	box-sizing: border-box;
+	-webkit-animation: gimbal 3.5s alternate infinite ease-in-out;
+	-webkit-transform-style: preserve-3d;
+}
+
+@-webkit-keyframes gimbal {
+	from { -webkit-transform: rotateX(0deg); }
+	to { -webkit-transform: rotateX(360deg); }
+}
+
+div#O div.the-letter div.gimbal::after {
+	content: '';
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	left: 0;
+	border: 5px solid #6666BA;
+	border-radius: 50%;
+	box-sizing: border-box;
+	-webkit-animation: gimbalInside 2.5s alternate infinite ease-in-out;
+}
+
+@-webkit-keyframes gimbalInside {
+	from { -webkit-transform: rotateY(0deg); }
+	to { -webkit-transform: rotateY(360deg); }
+}
+
+/* ~~~~~~~~~~~~~~~~~~~~~~~ Letter "N" ~~~~~~~~~~~~~~~~~~~~~~~ */
+
+div#N div.letter-box {
+	content: '';
+	position: absolute;
+	width: 70%;
+	height: 75%;
+	border-right: 1px dotted #aaa6BA; 
+	border-top: 1px dotted #aaa6BA; 
+}
+
+div#N::before {
+	content: '';
+	position: absolute;
+	width: 50px;
+	height: 50px;
+	right: 2.5%;
+	top: 2.5%;
+	border-radius: 50%;
+	border: 1px solid  #6666BA;
+	-webkit-transform: rotate(-45deg);
+	box-sizing: border-box;
+}
+
+div#N::after {
+	content: '';
+	position: absolute;
+	width: 50px;
+	height: 50px;
+	right: 2.5%;
+	top: 2.5%;
+	border-radius: 50%;
+	border: 5px solid transparent;
+	border-top: 5px solid  #6666BA;
+	-webkit-transform: rotate(-135deg);
+	box-sizing: border-box;
+}
+
+div#N div.the-letter {
+	position: absolute;
+	width: 20%;
+	height: 90%;
+	top: 5%;
+}
+
+div#N div.the-letter::before {
+	content: '';
+	position: absolute;
+	width: 120%;
+	height: 100%;
+	right: -170%;
+	background-color: #6666BA;
+	-webkit-transform: skewX(25deg);
+}
+
+div#N div.letter-piece {
+	position: absolute;
+	width: 100%;
+	height: 90%;
+	top: 5%;
+	left: 60%;
+	border-left: 2px dashed #6666BA;
+	-webkit-transform: skewX(25deg);
+}
+
+div#N div.letter-piece::before {
+	content: '';
+	position: absolute;
+	height: 80%;
+	bottom: 0;
+	border-left: 2px dashed #6666BA;
+	-webkit-transform-origin: bottom;
+	-webkit-transform: skewX(-25deg);
+}
+
+div#N div.letter-piece::after {
+	content: '';
+	position: absolute;
+	width: 0;
+	height: 0;
+	border-top: 3px solid transparent;
+	border-bottom: 3px solid transparent;
+	border-left: 15px solid #6666BA;
+	left: 42%;
+	top: 15%;
+	-webkit-transform: skewX(-25deg) rotate(-90deg);
+}
