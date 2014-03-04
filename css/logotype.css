@@ -125,6 +125,7 @@ div#J div.j-bottom {
 	width: 9em;
 	height: 9em;
 	bottom: 10%;
+	left: 0.4em;
 	border: 2px solid transparent;
 	border-bottom-color: #6666BA;
 	border-left-color: #6666BA;
@@ -138,7 +139,7 @@ div#J div.j-bottom::before {
 	position: absolute;
 	width: 100%;
 	height: 100%;
-	border: 35px solid rgba(176,176,218,1);
+	border: 30px solid rgba(176,176,218,1);
 	border-bottom-left-radius: 50%;
 	border-top-left-radius: 50%;
 	box-sizing: border-box;

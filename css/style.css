@@ -1,6 +1,13 @@
 * { box-sizing: border-box; }
 
+*::before, *::after {
+	content: '';
+	position: absolute;
+}
+
 html, body { width: 100%; height: 100%; margin: 0; overflow-x: hidden;}
+
+a { text-decoration: none; }
 
 header {
 	position: absolute;
@@ -12,8 +19,6 @@ header {
 }
 
 header::after {
-	content: '';
-	position: absolute;
 	top: 0;
 	width: 150%;
 	margin-left: -25%;
@@ -23,20 +28,19 @@ header::after {
 	z-index: -1;
 }
 
-div#info {
+div#layout {
 	position: absolute;
 	top: 40%;	
 	width: 100%;
-	height: 200%;
+	height: 230em;
 	background: #6666BA;
-	background: -webkit-linear-gradient(top, #6666BA, #68ba8f 50%, #c4df9b 100%);
+	background: -webkit-linear-gradient(top, #6666BA, #68ba8f 45em, #c4df9b 90em, #f68e56 135em, #ed145b 180em, #92278f 225em, #84258a 230em );
 	font-family: 'Segoe-Light';
-	color: rgba(255,255,255,0.5);
 	padding: 2em;
 	z-index: -2;
 }
 
-div#info h1,h2,h3 {
+h1,h2 {
 	font-weight: normal;
 	display: block;
 	margin: 0;
@@ -44,31 +48,300 @@ div#info h1,h2,h3 {
 	text-align: center;
 }
 
-div#info h1 {
+h1 {
 	font-size: 45pt;
 	position: relative;
 	color: #f9f9f9;
+	margin-bottom: 1em;
 }
 
-div#info h2 { font-size: 12pt; }
-
-div#info h2:first-child { font-size: 18pt; margin-bottom: 0.5em; }
-
-div#info .infobox {
+h4 {
+	display: block;
 	position: relative;
-	width: 100%;
-	height: 10em;
+	color: rgba(255,255,255,0.4);
+	width: 40em;
+	font-size: 12pt;
+	font-weight: normal;
+	padding-top: 5em;
+	text-align: center;
 	margin: 0 auto;
-	top: 5%;
+}
+
+h2 { font-size: 12pt; }
+
+h2:first-child { font-size: 18pt; margin-bottom: 0.5em; }
+
+div#layout .layoutbox {
+	position: relative;
+	width: 60%;
+	height: 30em;
+	margin: 0 auto;
 	background-size: 1em 1em;
 }
 
-div#info #about {
-	width: 60%;
-	top: 20em;
+div#layout #snippet {
+	color: rgba(255,255,255,0.9);
+}
+
+div#layout #about {
+	height: 16em;
 	color: #333;
 	z-index: 5;
+	background: -webkit-radial-gradient(bottom center, rgba(256,256,186,0.2) 0%, transparent 50%);
 }
+
+div#layout #about::after {
+	bottom: -1px;
+	width: 500px;
+	left: 50%;
+	margin-left: -250px;
+	border: 10px solid transparent;
+	border-radius: 25%;
+	box-shadow: 0px 2px 2px 0px rgba(0,0,0,0.1);
+	clip: rect(20px,500px,500px,0);
+}
+
+div#layout #about::before {
+	bottom: -1px;
+	width: 300px;
+	height: 10px;
+	left: 50%;
+	margin-left: -150px;
+	border-top: 10px solid transparent;
+	border-radius: 50%;
+	box-shadow: 0px 5px 5px 0px rgba(0,0,0,0.3);
+	clip: rect(20px,300px,300px,0);
+}
+
+div#layout #whoami {
+	width: 70%;
+	height: 20em;
+	color: #333;
+	padding: 5em 4em;
+	background: -webkit-radial-gradient(top center, rgba(26,127,75,0.3) 0%, transparent 50%);
+}
+
+div#layout #whoami::before {
+	width: 100%;
+	height: 100%;
+	-webkit-transform: skewY(3deg) skewX(-3deg);
+	border-bottom: 1px solid rgba(255,255,255,0.2);
+	border-right: 1px solid rgba(255,255,255,0.2);
+	background: -webkit-radial-gradient(bottom right, rgba(256,256,256,0.7) 0%, rgba(256,256,186,0.4) 15%, transparent 70%);
+	box-shadow: 2px 2px 3px 0px rgba(0,0,0,0.1);
+	z-index: 1;
+}
+
+div#layout #whoami::after {
+	width: 98%;
+	height: 3em;
+	border-bottom-left-radius: 75%;
+	border-bottom-right-radius: 25%;
+	-webkit-transform: skewY(3deg) skewX(-3deg);
+	box-sizing: border-box;
+	bottom: -5em;
+	z-index: 0;
+	box-shadow: 0px 0px 25px 0px rgba(0,0,0,0.9);
+	clip: rect(3em, 10000px, 100px, 0);
+}
+
+div#layout #langs {
+	padding-top: 10em;
+	height: 57em;
+	width: 70%;
+	margin: 0 auto;
+	color: #333;
+	background: -webkit-radial-gradient(bottom center, rgba(256,256,186,0.2) 0%, transparent 50%);
+}
+
+div#layout #langs::after {
+	bottom: -1px;
+	width: 500px;
+	left: 50%;
+	margin-left: -250px;
+	border: 10px solid transparent;
+	border-radius: 25%;
+	box-shadow: 0px 2px 2px 0px rgba(0,0,0,0.1);
+	clip: rect(20px,500px,500px,0);
+}
+
+div#layout #langs::before {
+	bottom: -1px;
+	width: 300px;
+	height: 10px;
+	left: 50%;
+	margin-left: -150px;
+	border-top: 10px solid transparent;
+	border-radius: 50%;
+	box-shadow: 0px 5px 5px 0px rgba(0,0,0,0.3);
+	clip: rect(20px,300px,300px,0);
+}
+
+div#layout #langs div.titlearea {
+	position: relative;
+	box-shadow: 0 4px 2px -2px rgba(0,0,0,0.1);
+	width: 100%;
+	padding: 3em 0em 10em 0em;
+	-webkit-transform: skewY(-5deg);
+	background: -webkit-radial-gradient(25% 100%, circle, rgba(255,243,165,0.5) 0%, transparent 25%),
+	-webkit-radial-gradient(85% 100%, circle, rgba(255,243,165,0.4) 0%, transparent 15%),
+	-webkit-radial-gradient(bottom center, rgba(155,148,100,0.2) 0%, transparent 50%);
+}
+
+div#layout #langs div.titlearea::before {
+	width: 25%;
+	height: 5em;
+	bottom: 0;
+	right: 0;
+	border-radius: 50%;
+	box-shadow: 0px 0px 15px 0px rgba(0,0,0,0.5);
+	clip: rect(5em,100em,100em,0);
+} 
+
+div#layout #langs div.titlearea::after {
+	width: 50%;
+	height: 5em;
+	bottom: 0;
+	border-radius: 50%;
+	box-shadow: 0px 0px 25px 0px rgba(0,0,0,0.5);
+	clip: rect(5em,100em,100em,0);
+}
+
+/* make the text horizontal again */
+div#layout #langs div.titlearea h2 { -webkit-transform: skewY(5deg); } 
+
+div#layout #langs ul {
+	position: relative;
+	top: 5em;
+	width: 88%;
+	margin: 0 auto;
+	list-style-type: none;
+	padding: 0;
+}
+
+div#langs ul li {
+	margin: 0.5em;
+	width: 7em;
+	height: 7em;
+	position: relative;
+	display: inline-block;
+	border-radius: 50%;
+	-webkit-animation-play-state: paused;
+}
+
+div#langs ul li::before {
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+	border-radius: 50%;
+	border: 1px solid rgba(0,0,0,0.5);
+	box-sizing: border-box;
+	clip: rect(0,7em,0em,3.5em);
+	-webkit-animation: percent-right 2s ease-in-out forwards;
+	-webkit-animation-play-state: inherit;
+}
+
+div#langs ul li::after {
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+	border-radius: 50%;
+	border: 1px solid rgba(0,0,0,0.5);
+	box-sizing: border-box;
+	clip: rect(7em,3.5em,7em,0em);
+}
+
+div#langs ul li span {
+	color: #333;
+	display: block;
+	width: 100%;
+	text-align: center;
+	position: relative;
+	top: 37%;
+	margin: 0 auto;
+}
+
+/** 
+ * this probably isn't a particularly effecient way of doing this. Actually its just awful. But
+ * I was curious if this would be possible with only CSS and no JS and.... 
+ * well anyway the only JS used is to queue the animation when the page is scrolled here
+ */
+
+div#langs ul li.css::after {
+	-webkit-animation: percent-left-95 1s ease-in-out 1s forwards;
+	-webkit-animation-play-state: inherit;
+}
+
+div#langs ul li.js::after {
+	-webkit-animation: percent-left-90 1s ease-in-out 1s forwards;
+	-webkit-animation-play-state: inherit;
+}
+
+div#langs ul li.python::after {
+	-webkit-animation: percent-left-60 1s ease-in-out 1s forwards;
+	-webkit-animation-play-state: inherit;
+}
+
+div#langs ul li.php::after {
+	-webkit-animation: percent-left-60 1s ease-in-out 1s forwards;
+	-webkit-animation-play-state: inherit;
+}
+
+div#langs ul li.matlab::after {
+	-webkit-animation: percent-left-99 1s ease-in-out 1s forwards;
+	-webkit-animation-play-state: inherit;
+}
+
+div#langs ul li.jquery::after {
+	-webkit-animation: percent-left-75 1s ease-in-out 1s forwards;
+	-webkit-animation-play-state: inherit;
+}
+
+div#langs ul li.threejs::after {
+	-webkit-animation: percent-left-75 1s ease-in-out 1s forwards;
+	-webkit-animation-play-state: inherit;
+}
+
+div#langs ul li.numpy::after {
+	-webkit-animation: percent-left-60 1s ease-in-out 1s forwards;
+	-webkit-animation-play-state: inherit;
+}
+
+/* bleghhh ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+
+@-webkit-keyframes percent-left-99 {
+	from { clip: rect(7em,3.5em,7em,0em); }
+	to { clip: rect(0.2em,3.5em,7em,0em); }
+}
+
+@-webkit-keyframes percent-left-95 {
+	from { clip: rect(7em,3.5em,7em,0em); }
+	to { clip: rect(0.4em,3.5em,7em,0em); }
+}
+
+@-webkit-keyframes percent-left-90 {
+	from { clip: rect(7em,3.5em,7em,0em); }
+	to { clip: rect(1em,3.5em,7em,0em); }
+}
+
+@-webkit-keyframes percent-left-75 {
+	from { clip: rect(7em,3.5em,7em,0em); }
+	to { clip: rect(3.5em,3.5em,7em,0em); }
+}
+
+@-webkit-keyframes percent-left-60 {
+	from { clip: rect(7em,3.5em,7em,0em); }
+	to { clip: rect(5em,3.5em,7em,0em); }
+}
+
+@-webkit-keyframes percent-right {
+	0% { clip: rect(0px,7em,0em,3.5em); }
+	50% { clip: rect(0px,7em,7em,3.5em); }
+	100% { clip: rect(0px,7em,7em,3.5em); }
+}
+
 
 span#chevron {
 	position: absolute;
@@ -84,8 +357,6 @@ span#chevron {
 }
 
 span#chevron::before {
-	content: '';
-	position: absolute;
 	width: 2em;
 	height: 2em;
 	top: -1em;
@@ -96,8 +367,6 @@ span#chevron::before {
 }
 
 span#chevron::after {
-	content: '';
-	position: absolute;
 	width: 1em;
 	height: 1em;
 	top: -1.5em;
@@ -106,6 +375,145 @@ span#chevron::after {
 	border-left-color: rgba(255,255,255,0.5);
 	border-bottom-color: rgba(255,255,255,0.5);
 }
+
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+
+div#layout #diagbars {
+	position: relative;
+	height: 63em;
+	width: 100%;
+	padding-top: 8em;
+	background: -webkit-radial-gradient(top center, rgba(242,108,86,0.3) 0%, transparent 50%);
+}
+
+div#layout #diagbars h2:first-child {
+	font-size: 22pt;
+}
+
+div#diagbars ul.diag {
+	list-style-type: none;
+	padding: 0;
+	margin: 7em 0 0 -10%;
+	position: absolute;
+	width: 120%;
+	height: 50%;
+}
+
+div#diagbars ul.diag li.diag {
+	display: inline-block;
+	position: relative;
+	height: 100%;
+	width: 12%;
+	-webkit-transform: skew(15deg);
+}
+
+div#diagbars ul.diag li.diag::after {
+	height: 100%;
+	width: 100%;
+	background: -webkit-radial-gradient(bottom center, 100% 50%, rgba(239,150,94,0.5) 0%, transparent 50%), -webkit-linear-gradient( top, transparent, #f15d57 90%);
+	margin: 0.1em;
+	box-shadow: 0px 2px 5px 0px rgba(0,0,0,0.1);
+}
+
+div#diagbars ul.diag li.diag::before {
+	height: 2em;
+	width: 80%;
+	bottom: 0;
+	left: 5%;
+	box-shadow: 0px 0px 15px 5px rgba(0,0,0,0.5);
+	border-radius: 50%;
+	z-index: 0;
+}
+
+div#diagbars ul.diag li ul {
+	position: absolute;
+	bottom: 0;
+	font-family: 'Source Code Pro';
+	z-index: 1;
+	padding: 0;
+	width: 100%;
+	left: 1px;
+}
+
+div#diagbars ul.diag li ul li {
+	display: inline-block;
+	width: 100%;
+	background-color: rgba(255,255,255,0.5);
+	padding: 0.5em;
+	position: relative;
+	margin: 0.1em 0em 0em 0em;
+	-webkit-transition: background-color 0.5s;
+}
+
+div#diagbars ul.diag li ul li:hover {
+	background-color: #fff;
+	cursor: pointer;
+}
+
+div#diagbars ul.diag li img {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	z-index: 1;
+}
+
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+
+div#layout #social {
+	position: relative;
+	height: 18em;
+	width: 75%;
+	box-shadow: 0 4px 2px -2px rgba(0,0,0,0.1);
+	background: -webkit-radial-gradient(25% 100%, circle, rgba(221,23,100,0.5) 0%, transparent 25%),
+	-webkit-radial-gradient(85% 100%, circle, rgba(221,23,100,0.4) 0%, transparent 15%),
+	-webkit-radial-gradient(bottom center, rgba(0,0,0,0.1) 0%, transparent 50%);
+}
+
+div#layout #social h1 {
+	font-size: 40pt;
+	color: rgba(255,255,255,0.8);
+	margin-bottom: 0.25em;
+}
+
+div#layout #social::before {
+	width: 25%;
+	height: 5em;
+	bottom: 0;
+	right: 0;
+	border-radius: 50%;
+	box-shadow: 0px 0px 15px 0px rgba(0,0,0,0.5);
+	clip: rect(5em,100em,100em,0);
+} 
+
+div#layout #social::after {
+	width: 50%;
+	height: 5em;
+	bottom: 0;
+	border-radius: 50%;
+	box-shadow: 0px 0px 25px 0px rgba(0,0,0,0.7);
+	clip: rect(5em,100em,100em,0);
+}
+
+div#layout #social div.icons {
+	position: relative;
+	width: 21em;
+	margin: 0 auto;
+}
+
+div#layout #social div.icons .icon {
+	height: 5em;
+	width: 5em;
+	stroke: transparent;
+	fill: rgba(255,255,255,0.2);
+	stroke-width: 10px;
+	-webkit-transition: fill 0.5s;
+}
+
+div#layout #social div.icons .icon:hover {
+	fill: rgba(255,255,255,1);
+}
+
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
 
 @font-face {
 	font-family: 'Segoe-Light';
