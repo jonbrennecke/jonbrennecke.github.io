@@ -13,7 +13,7 @@ header {
 	position: absolute;
 	top: 0;
 	width: 100%;
-	height: 40%;
+	height: 250px;
 	-webkit-box-shadow: 0px 0px 15px 5px rgba(0, 0, 0, 0.1);
 	background: #f9f9f9;
 }
@@ -30,7 +30,7 @@ header::after {
 
 div#layout {
 	position: absolute;
-	top: 40%;	
+	top: 250px;	
 	width: 100%;
 	height: 230em;
 	background: #6666BA;
